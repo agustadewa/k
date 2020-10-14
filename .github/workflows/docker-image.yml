@@ -13,10 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Build the Docker image
     - uses: actions/checkout@v2
+    - name: Build the Docker image
       run: docker build . --file Dockerfile --tag yosiaagusta/k-img:latest
       
+    - uses: actions/checkout@v2
     - name: Push Docker image
       run: docker push yosiaagusta/k-img:latest
   
