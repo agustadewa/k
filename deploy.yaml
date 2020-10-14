@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app-api
-        image: agustadewa/k-img
+        image: yosiaagusta/k-img
         ports:
         - name: node
           containerPort: 3000
