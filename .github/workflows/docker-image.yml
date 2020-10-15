@@ -14,9 +14,5 @@ jobs:
 
     steps:
 
-    - uses: Satak/webrequest-action@v1.2.3
-      name: Web Request Action
-      with:
-        url: https://hub.docker.com/api/build/v1/source/7fcd2f3c-5d41-4250-9243-3fe888f4ac7f/trigger/2b70ea13-e1e8-4162-90dc-9de5175c1327/call/
-        method: POST
-      run: curl https://hub.docker.com/api/build/v1/source/7fcd2f3c-5d41-4250-9243-3fe888f4ac7f/trigger/2b70ea13-e1e8-4162-90dc-9de5175c1327/call/
+    - name: Web Request Action
+      run: curl -X POST https://hub.docker.com/api/build/v1/source/7fcd2f3c-5d41-4250-9243-3fe888f4ac7f/trigger/2b70ea13-e1e8-4162-90dc-9de5175c1327/call/
